@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body{
+            background-color: steelblue;
+            color: white;
+            font: normal 18pt arial;
+        }
+        strong{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudo com DOM</h1>
+    <p>Aqui vai o resultado </p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">clique em min</div>
+    <div name="exe">outro exemplo</div>
+
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0]
+        var d = window.document.getElementById('msg')
+        var e = window.document.getElementsByName('exe')[0]
+        corpo.style.background = "lightgray"
+        d.style.background = "green"
+        p1.style.color = "Black"
+        e.style.color = "blue"
+
+        /*
+        O 0 serve para mostrar qual tag eu quero usar caso eu queria usar o segundo P devo colocar o numero 1 e assim sucessivamente
+        o primeiro é 0
+        o segundo é 1
+        o terceiro é 2
+        o quarto é 3
+        e assim vai
+        */
+        window.document.write('aqui foi: ' + e.innerHTML)
+        window.document.write(' Está escrito assim: ' + p1.innerText)
+        /*
+        innertext pega o texto sem a formatação
+        ja o innerHTML pega completo
+        */
+       /*query selector*/
+       var d = window.document.queryselector('div#msg')
+       d.style.background = "blue"
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onclick</title>
+    <style>
+        div#botão{
+            text-align: center;
+            font-size:1.3em;
+            width:160px;
+            height:30px;
+            border:1px solid black;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: grey;
+            margin-bottom:20px;
+        }
+        div#botão2{
+            text-align: center;
+            font-size:1.3em;
+            width:160px;
+            height:30px;
+            border:1px solid black;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: grey;
+            margin-bottom:20px;
+        }
+
+        div#botão3{
+            text-align: center;
+            font-size:1.3em;
+            width:160px;
+            height:30px;
+            border:1px solid black;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <h1>Testando Onclick</h1>
+    <div id="botão"> 
+    segure o botão
+        </div>
+    <div id="botão2"> 
+        passe aqui
+        </div>
+
+    <div id="botão3"> 
+        botão extra
+        </div>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut pariatur placeat maiores libero porro, corrupti praesentium ad mollitia quisquam quae autem, quia deleniti ullam eius excepturi repellendus eum sunt! Repellendus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, corporis quidem odio velit labore voluptatibus corrupti alias minus explicabo. Expedita unde totam itaque a vero voluptatum atque dicta culpa</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus illum, reprehenderit similique recusandae accusamus veniam, consectetur iste modi veritatis quisquam accusantium, voluptate architecto blanditiis corrupti quibusdam! Cum repudiandae optio quam.</p>
+    
+    <script>
+        var b = window.document.getElementById('botão')
+        var b2 = window.document.getElementById('botão2')
+        var b3 = window.document.getElementById('botão3')
+        b.addEventListener('click',clicar)
+        b.addEventListener('mousedown',cd)
+        b2.addEventListener('mouseenter',entrar)
+        b2.addEventListener('mouseout',sair)
+        b3.addEventListener('mousemove',mover)
+        b3.addEventListener('mouseup',soltar)
+        function clicar(){
+            b.style.background = 'grey'
+        }
+        function cd (){
+            b.style.background = 'red'
+        }
+        function entrar(){
+            b2.style.background = 'blue'
+        }
+        function sair(){
+            b2.style.background = 'grey'
+        }
+        function mover(){
+            b3.style.background = 'grey'
+        }
+        function soltar(){
+            b3.innerText = 'bug'
+            b3.style.background = 'green'
+        }
+    </script>
+</body>
+</html>

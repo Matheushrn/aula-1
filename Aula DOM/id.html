@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByid</title>
+    <style>
+        p{
+            font-size: 2em;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>ID</h1>
+
+    <p id="one">um</p>
+    <p id="two">dois</p>
+    <script>
+        var u = window.document.getElementById('one')
+        var d = window.document.getElementById('two')
+        u.style.color = 'red'
+        u.style.textDecoration = 'underline'
+        u.style.textDecorationColor = 'lightblue'
+        d.style.color = 'green'
+    </script>
+</body>
+</html>
