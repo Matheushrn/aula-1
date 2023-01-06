@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Qual sua Nacionalidade</h1>
+    <input type="text" name="txtna" id="txtna">
+    <input type="button" value="Verificar" onclick="clicar()">
+    <div id="res"></div>
+
+    <script>
+        var na = window.document.getElementById('txtna')
+        var res = window.document.getElementById('res')
+        
+
+        function clicar(){
+            res.innerHTML = "Sua nacionalidade "
+            if(na.value == 'brasileiro' || na.value == 'Brasileiro'|| na.value == 'Brasileira' || na.value == 'brasileira' ){
+                res.innerHTML += ` é ${na.value} então voce provavelmente mora no brasil`
+            } else {
+                res.innerHTML += ` é ${na.value} então talvez você não more no brasil`
+            }
+        }
+    </script>
+</body>
+</html>
