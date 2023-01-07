@@ -16,6 +16,10 @@ section{
     margin: auto;
     box-shadow:5px 5px 10px rgba(0, 0, 0, 0.53);
 }
+div#msg{
+    text-align: center;
+    font-size:2em;
+}
 
 footer{
     text-align: center;
